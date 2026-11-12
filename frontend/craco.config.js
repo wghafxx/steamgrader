@@ -32,6 +32,13 @@ function makeDevServerV5Compatible(devServerConfig) {
     "Cross-Origin-Resource-Policy": "same-origin",
   };
 
+  if (process.env.STEAMGRADER_LOCAL_API) {
+    compatibleConfig.proxy = [
+      ...(compatibleConfig.proxy || []),
+      { context: ["/api"], target: process.env.STEAMGRADER_LOCAL_API },
+    ];
+  }
+
   if (onBeforeSetupMiddleware || setupMiddlewares) {
     compatibleConfig.setupMiddlewares = (middlewares, devServer) => {
       if (onBeforeSetupMiddleware) {

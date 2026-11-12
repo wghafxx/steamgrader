@@ -1,0 +1,120 @@
+{
+  "project_name": "Steam Style Online Casino & CS2 Upgrader Shell",
+  "persona": "E1 Creative Designer - Steam Platform Aesthetic & CS2 Upgrader Fusion",
+  "language": "Russian (RU)",
+  "app_type": "landing_page shell / sketch layout",
+  "theme": "Dark Steam Navy Mode (#171a21 / #1b2838 / #2a475e)",
+  "design_philosophy": {
+    "core_concept": "Authentic Valve Steam Client & Store visual language meets CS2 Item Upgrader UI shell.",
+    "emotional_tone": "Gamer-centric, high-trust, sleek industrial UI, tactical, high precision.",
+    "key_layout_sections": [
+      "Header: Steam top dark header bar (#171a21) with official Steam-style logo, Navigation links (МАГАЗИН, СООБЩЕСТВО, О НАС, ПОДДЕРЖКА), language/install button, User Profile Block (Avatar, Steam Nickname, Balance display 'Баланс: 1,250.00 ₽', 'Пополнить' green button, notifications icon).",
+      "Main Content Div (Основа сайта): Dark blue gradient container background (#1b2838 to #171a21), ambient blue glow, placeholder canvas area for upcoming game modes (Upgrader, Case Opening, Wheel, Coinflip) with futuristic CS2 HUD card placeholders and mode switcher tabs.",
+      "Footer (Подвал сайта): Steam copyright section (#171a21 / #111417), Valve / Steam legal disclaimers, Valve logo, Steam logo, quick links, payment processor icons (Mir, Visa, MasterCard, Crypto, SBP), 18+ badge, CS2 skin rarity indicator accents."
+    ]
+  },
+  "colors": {
+    "background_header": "#171a21",
+    "background_main_top": "#1b2838",
+    "background_main_bottom": "#101822",
+    "background_footer": "#111417",
+    "surface_card": "#1e2e3e",
+    "surface_card_hover": "#2a475e",
+    "steam_blue_accent": "#66c0f4",
+    "steam_bright_blue": "#1a9fff",
+    "steam_text_light": "#c6d4df",
+    "steam_text_muted": "#8f98a0",
+    "steam_green_action": "#a4d007",
+    "steam_green_action_bg": "#5c7e10",
+    "steam_green_hover": "#bbf109",
+    "border_subtle": "rgba(102, 192, 244, 0.15)",
+    "border_focus": "#66c0f4",
+    "cs2_rarities": {
+      "consumer": "#b0c3d9",
+      "industrial": "#5e98d9",
+      "mil_spec": "#4b69ff",
+      "restricted": "#8847ff",
+      "classified": "#d32ce6",
+      "covert": "#eb4b4b",
+      "gold_knife": "#ffd700"
+    }
+  },
+  "typography": {
+    "font_family_heading": "Motiva Sans, system-ui, -apple-system, sans-serif",
+    "font_family_body": "Motiva Sans, system-ui, -apple-system, sans-serif",
+    "sizes": {
+      "hero_title": "text-3xl md:text-5xl font-extrabold tracking-tight text-white",
+      "section_title": "text-xl md:text-2xl font-bold uppercase tracking-wider text-[#66c0f4]",
+      "nav_item": "text-xs md:text-sm font-semibold uppercase tracking-wider text-[#c6d4df] hover:text-[#1a9fff]",
+      "balance_text": "text-sm md:text-base font-bold text-[#a4d007]",
+      "body_muted": "text-xs md:text-sm text-[#8f98a0]"
+    }
+  },
+  "visual_enhancers": [
+    "Steam-style top linear gradient border with glowing blue accent line",
+    "Backdrop blur (#171a21 with 80% opacity and 12px blur for fixed sub-header)",
+    "Custom scrollbar styled in Steam dark blue (#1b2838 thumb, #101822 track)",
+    "Subtle ambient glow around active tabs and CS2 HUD element cards",
+    "Radial gradient lighting in background: radial-gradient(circle at 50% 20%, rgba(26, 159, 255, 0.08), transparent 70%)"
+  ],
+  "grids_and_layouts": {
+    "header_layout": "Fixed / Sticky header with top utility bar + main Steam nav grid (Logo left, Nav center-left, Profile & Balance block right)",
+    "main_container": "Max width 1200px centered container with p-4 md:p-8, structured layout with Mode Tabs at top, central empty interactive canvas placeholder, item drop ticker at top/side",
+    "footer_layout": "Full width dark container with 3-column link grid, Valve & Steam style disclaimer text, payment icons row, and live server status ping"
+  },
+  "components_to_build": [
+    {
+      "name": "SteamHeader",
+      "path": "frontend/src/components/SteamHeader.js",
+      "description": "Full Steam header with logo, Russian nav links, language selector, Steam login button or Logged-In Profile block with avatar badge, username, balance in RUB, and green 'Пополнить' button."
+    },
+    {
+      "name": "LiveDropBar",
+      "path": "frontend/src/components/LiveDropBar.js",
+      "description": "Horizontal ticker displaying recently upgraded / won CS2 items with rarity color borders and live user avatars."
+    },
+    {
+      "name": "MainContentShell",
+      "path": "frontend/src/components/MainContentShell.js",
+      "description": "The central section (Основа сайта) containing mode selection cards (Апгрейдер, Кейсы, Колесо, Дуэли), active mode placeholder div with steam gradient backdrop, slot drop zones, and quick inventory panel."
+    },
+    {
+      "name": "SteamFooter",
+      "path": "frontend/src/components/SteamFooter.js",
+      "description": "Replicated Steam / Upgrader footer with copyright disclaimers, payment methods (SBP, Mir, Crypto, Visa), social links (Telegram, VK, Discord), and Steam API affiliation note."
+    }
+  ],
+  "image_urls": {
+    "hero_bg": "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "gaming_setup": "https://images.unsplash.com/photo-1696710257827-75e2e5954059?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "avatar_placeholder": "https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?crop=entropy&cs=srgb&fm=jpg&q=85"
+  },
+  "testing_and_accessibility": {
+    "data_testid_requirement": "All interactive elements, buttons, inputs, mode tabs, profile actions, and footer links MUST include data-testid in kebab-case format.",
+    "sample_testids": [
+      "steam-logo-link",
+      "nav-item-store",
+      "nav-item-community",
+      "nav-item-about",
+      "nav-item-support",
+      "user-profile-avatar",
+      "user-balance-amount",
+      "deposit-button",
+      "mode-tab-upgrader",
+      "mode-tab-cases",
+      "mode-tab-wheel",
+      "mode-tab-duels",
+      "main-content-placeholder",
+      "footer-steam-disclaimer",
+      "footer-payment-methods"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Ensure the visual aesthetic matches Steam exactly: deep dark blues (#171a21, #1b2838), bright electric blue text/accents (#66c0f4, #1a9fff), and vibrant green action buttons (#a4d007 / #5c7e10 background).",
+    "Use Russian UI text everywhere as specified (МАГАЗИН, СООБЩЕСТВО, О НАС, ПОДДЕРЖКА, Баланс: 1,250.00 ₽, Пополнить, Вход через Steam, Апгрейдер предметов CS2, etc.).",
+    "Build the 3 major areas explicitly requested: 1) Шапка сайта (Header), 2) Основа сайта (Main Div Placeholder), 3) Подвал сайта (Footer).",
+    "Include a live drop ticker bar showing CS2 skins with rarity borders (Covert red, Classified purple, etc.) to give the authentic Upgrader vibe.",
+    "Do not use generic white or standard bright gradients. Maintain Steam's industrial dark steel and glowing neon blue atmosphere.",
+    "Make sure all files created are JavaScript (.js) as required by project conventions."
+  ]
+}
